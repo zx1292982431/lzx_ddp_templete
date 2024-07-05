@@ -1,0 +1,26 @@
+# data
+n_fft: 320
+n_hop: 160
+wav_len: 6 #s
+samplerate: 16000
+train_data_path: '/ddnstor/imu_heshulin/downloads/Libri2Mix/wav16k/min/train-100/mix_clean'
+eval_data_path: '/ddnstor/imu_heshulin/downloads/Libri2Mix/wav16k/min/dev/mix_clean'
+SEEDS: {
+  'train': 1,
+  'eval': 2,
+  'test': 3,
+}
+
+# Train
+sample_rate: 16000
+seed_everything: 2
+BATCH_SIZE: 24
+NUM_WORK: 6
+
+MAX_EPOCH: 400
+WARM_UP_EPOCHS: 0
+LR: 0.001
+OUTPUT_DIR: /ddnstor/imu_heshulin/lzx/results
+WORKSPACE: /VAD-TSE/libri2mix-VADCRN2out-zcjvad-gtcrnloss-classify-20sisdr
+SAVE_EVERY: 1
+SAVE_BEST_ONLY: True
